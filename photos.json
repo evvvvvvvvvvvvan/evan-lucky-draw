@@ -210,5 +210,8 @@
     }
   ],
   "sounds": [],
-  "cover": null
+  "cover": {
+    "id": "1299b2c41e17b879fdbe56e6",
+    "url": "cover/wvs.png?v=1792716091892598287-2918665"
+  }
 }
