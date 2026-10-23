@@ -53,8 +53,8 @@ h1 { margin: 0; font-family: "Songti SC", "STSong", "Noto Serif CJK SC", serif; 
   background: var(--blue-light);
   box-shadow: 5px 5px 0 -1px var(--blue), 5px 5px 0 0 var(--edge);
 }
-.cover-art { position: relative; width: 100%; aspect-ratio: 4 / 5; overflow: hidden; background: #cadce7; }
-.cover-image { display: block; width: 100%; height: 100%; object-fit: cover; }
+.cover-art { position: relative; width: 100%; min-height: 220px; overflow: hidden; background: #cadce7; }
+.cover-image { display: block; width: 100%; height: auto; max-height: 62svh; object-fit: contain; }
 .cover-placeholder { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 29px; padding: 20px; }
 .cover-kicker { font: 8px ui-monospace, SFMono-Regular, monospace; letter-spacing: .14em; color: #607e94; }
 .pig-stamp { display: grid; place-items: center; width: 85px; height: 85px; padding: 12px; transform: rotate(8deg); border: 1px solid #95b0c3; border-radius: 50%; color: #6e90a8; }
@@ -62,7 +62,8 @@ h1 { margin: 0; font-family: "Songti SC", "STSong", "Noto Serif CJK SC", serif; 
 .cover-placeholder p { margin: 0; color: #55748b; font-size: 11px; letter-spacing: .05em; }
 .pack-footer { display: flex; justify-content: space-between; align-items: center; gap: 10px; min-height: 42px; padding: 5px 4px 0; }
 .pack-footer > span:first-child { color: var(--muted); font: 7px ui-monospace, SFMono-Regular, monospace; letter-spacing: .1em; }
-.handwritten { color: var(--muted); font: italic 18px Georgia, "Times New Roman", serif; white-space: nowrap; transform: rotate(-5deg); }
+.handwritten { color: var(--accent); font: italic 15px Georgia, "Times New Roman", serif; letter-spacing: .035em; white-space: nowrap; }
+.handwritten span { padding-left: 3px; color: #b68b62; font-size: 12px; }
 .result img { display: block; width: 100%; height: auto; max-height: 65svh; object-fit: contain; }
 .draw-button {
   display: flex;
@@ -86,7 +87,7 @@ h1 { margin: 0; font-family: "Songti SC", "STSong", "Noto Serif CJK SC", serif; 
 .draw-button:active { transform: translateY(0); }
 .draw-button:disabled { opacity: .65; cursor: wait; transform: none; }
 .draw-button:focus-visible { outline: 2px solid var(--accent-deep); outline-offset: 5px; }
-.draw-button > span:first-child { font-size: 22px; line-height: 1; font-weight: 400; }
+.draw-button > span:first-child { font-size: 23px; line-height: 1; font-weight: 400; }
 .draw-button > span:last-child { display: grid; place-items: center; width: 39px; height: 39px; border-radius: 50%; background: var(--blue-light); color: var(--accent); font-size: 20px; }
 .error-message { margin: -8px 0 0; font-size: 12px; line-height: 1.7; color: var(--ink); text-align: center; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }

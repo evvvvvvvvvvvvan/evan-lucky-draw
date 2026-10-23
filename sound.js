@@ -5,12 +5,12 @@
   player.preload = "none";
   player.volume = 0.65;
   const voices = new Set();
-  let enabled = true;
+  let enabled = false;
   let library = [];
   let lastSound = "";
   let context;
   let generation = 0;
-  try { enabled = localStorage.getItem("pig-sound-enabled") !== "false"; } catch { /* Sound also works without saved preferences. */ }
+  try { localStorage.setItem("pig-sound-enabled", "false"); } catch { /* Default to muted when preferences are unavailable. */ }
 
   function updateToggle() {
     toggle.classList.toggle("is-muted", !enabled);

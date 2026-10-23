@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#dce7ee">
-  <title>领取一只小猪 🐷</title>
+  <title>领取小猪🐽</title>
   <link rel="stylesheet" href="styles.css">
   <script src="library.js" defer></script>
   <script src="sound.js" defer></script>
@@ -13,8 +13,8 @@
 <body>
   <main class="lottery">
     <div class="lottery-heading">
-      <div class="heading-copy"><p class="kicker">A LITTLE LUCK, JUST FOR YOU</p><h1>领取一只小猪 🐷</h1></div>
-      <button class="sound-toggle" id="soundToggle" type="button" aria-pressed="true" aria-label="关闭音效" title="关闭音效">
+      <div class="heading-copy"><h1>领取小猪🐽</h1></div>
+      <button class="sound-toggle is-muted" id="soundToggle" type="button" aria-pressed="false" aria-label="开启音效" title="开启音效">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z"/><path class="sound-waves" d="M16 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/><path class="sound-cross" d="m17 9 5 6m0-6-5 6"/></svg>
       </button>
     </div>
@@ -23,23 +23,23 @@
         <div class="cover-art">
           <img class="cover-image" id="coverImage" alt="" hidden>
           <div class="cover-placeholder" id="coverPlaceholder">
-            <span class="cover-kicker">A LITTLE PIG FOR YOU</span>
+            <span class="cover-kicker">🐽🐽🐽🐽</span>
             <span class="pig-stamp"><svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m17 28-4-16 20 9m14 0 20-9-4 16"/><ellipse cx="40" cy="43" rx="27" ry="25"/><circle cx="29" cy="36" r="1.8" fill="currentColor" stroke="none"/><circle cx="51" cy="36" r="1.8" fill="currentColor" stroke="none"/><ellipse cx="40" cy="49" rx="13" ry="9"/><path d="M35 47v4m10-4v4m-10 11q5 4 10 0"/></svg></span>
-            <p>一只小猪，等你领走。</p>
+            <p>🐽🐽🐽🐽</p>
           </div>
         </div>
-        <div class="pack-footer"><span>ONE LITTLE SURPRISE</span><span class="handwritten">for you!</span></div>
+        <div class="pack-footer"><span class="handwritten">EVAN <span aria-hidden="true">✦</span></span></div>
       </div>
       <figure class="result" id="result" hidden>
         <img id="drawImage" alt="这次领到的小猪">
       </figure>
     </div>
     <button class="draw-button" id="drawButton" type="button" disabled>
-      <span aria-hidden="true">✳</span>
+      <span aria-hidden="true">🐽</span>
       <span id="drawButtonText">领取小猪</span>
       <span aria-hidden="true">↗</span>
     </button>
-    <p class="sr-only" id="drawStatus" role="status" aria-live="polite">正在准备领取小猪。</p>
+    <p class="sr-only" id="drawStatus" role="status" aria-live="polite">小猪准备中</p>
   </main>
 </body>
 </html>

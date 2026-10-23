@@ -16,9 +16,9 @@
     $("#drawImage").removeAttribute("src");
     $("#result").hidden = true;
     $("#readyCard").hidden = false;
-    $("#drawButtonText").textContent = "领取小猪";
+    $("#drawButtonText").textContent = "领取一只小猪";
     $("#drawButton").disabled = false;
-    announce("准备好了，点击领取你的小猪。");
+    announce("ready");
   }
 
   async function loadPool() {
@@ -63,10 +63,10 @@
     state.busy = true;
     PIG_SOUND.play();
     $("#drawButton").disabled = true;
-    $("#drawButtonText").textContent = "小猪来啦";
+    $("#drawButtonText").textContent = "小猪准备中";
     $("#drawSurface").classList.add("is-drawing");
     $("#drawSurface").setAttribute("aria-busy", "true");
-    announce("正在挑选你的小猪。");
+    announce("正在挑选一只小猪");
 
     let candidates = state.pool.filter(item => !seen.has(item.id));
     if (!candidates.length) {
@@ -86,14 +86,14 @@
       $("#result").hidden = false;
       state.currentId = item.id;
       seen.add(item.id);
-      announce("你的小猪来啦。");
+      announce("小猪准备中");
     } catch {
       seen.add(item.id);
-      announce("小猪迷路了一下，请再领一次。", true);
+      announce("小猪丢失TT", true);
     } finally {
       state.busy = false;
       $("#drawButton").disabled = false;
-      $("#drawButtonText").textContent = state.currentId ? "再领一只" : "领取小猪";
+      $("#drawButtonText").textContent = state.currentId ? "再领一只" : "领取一只";
       $("#drawSurface").classList.remove("is-drawing");
       $("#drawSurface").setAttribute("aria-busy", "false");
     }
