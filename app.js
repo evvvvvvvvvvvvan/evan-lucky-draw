@@ -16,7 +16,7 @@
     $("#drawImage").removeAttribute("src");
     $("#result").hidden = true;
     $("#readyCard").hidden = false;
-    $("#drawButtonText").textContent = "领取一只小猪";
+    $("#drawButtonText").textContent = "领取一只猪猪承";
     $("#drawButton").disabled = false;
     announce("ready");
   }
@@ -63,7 +63,7 @@
     state.busy = true;
     PIG_SOUND.play();
     $("#drawButton").disabled = true;
-    $("#drawButtonText").textContent = "小猪准备中";
+    $("#drawButtonText").textContent = "猪猪承准备中";
     $("#drawSurface").classList.add("is-drawing");
     $("#drawSurface").setAttribute("aria-busy", "true");
     announce("正在挑选一只小猪");
@@ -86,14 +86,14 @@
       $("#result").hidden = false;
       state.currentId = item.id;
       seen.add(item.id);
-      announce("小猪准备中");
+      announce("猪猪承准备中");
     } catch {
       seen.add(item.id);
       announce("小猪丢失TT", true);
     } finally {
       state.busy = false;
       $("#drawButton").disabled = false;
-      $("#drawButtonText").textContent = state.currentId ? "再领一只" : "领取一只";
+      $("#drawButtonText").textContent = state.currentId ? "再领一只" : "领取一只猪猪承";
       $("#drawSurface").classList.remove("is-drawing");
       $("#drawSurface").setAttribute("aria-busy", "false");
     }
