@@ -63,7 +63,7 @@
     state.busy = true;
     PIG_SOUND.play();
     $("#drawButton").disabled = true;
-    $("#drawButtonText").textContent = "猪猪承准备中";
+    $("#drawButtonText").textContent = "猪猪准备中";
     $("#drawSurface").classList.add("is-drawing");
     $("#drawSurface").setAttribute("aria-busy", "true");
     announce("正在挑选一只小猪");
@@ -86,7 +86,7 @@
       $("#result").hidden = false;
       state.currentId = item.id;
       seen.add(item.id);
-      announce("猪猪承准备中");
+      announce("猪猪准备中");
     } catch {
       seen.add(item.id);
       announce("小猪丢失TT", true);
